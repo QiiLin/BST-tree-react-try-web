@@ -6,6 +6,10 @@ class Drawing extends Component {
         super(props);
     }
 
+    drwa_tree(node) {
+
+    }
+
     render() {
         let classname = "svg-plate";
         return (<svg className={classname} width="1000" height="600">

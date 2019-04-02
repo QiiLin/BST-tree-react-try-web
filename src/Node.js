@@ -57,7 +57,7 @@ class Node {
                     this.turning = false;
 
                 } else{
-                    this.right = Node(key, 0, 0);
+                    this.right = new Node(key, 0, 0);
                     this.right.setxy(this.x + 80, this.y + 80);
                     if (init_direction === false){
                             this.turning = true;
@@ -79,7 +79,7 @@ class Node {
                     this.turning = false;
                 }
                  else {
-                    this.left = Node(key, 0, 0);
+                    this.left = new Node(key, 0, 0);
                     this.left.setxy(this.x - 80, this.y + 80);
                     if (init_direction === true){
                         this.turning = true;

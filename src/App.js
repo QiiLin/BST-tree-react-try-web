@@ -10,10 +10,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {date: new Node(50, 600, 20)};
-        this.setState((state, props) => ({
-            date: state.date.insert(20,null)
-        }));
-    }
+
+    };
 
     componentDidMount() {
 
@@ -21,13 +19,21 @@ class App extends Component {
 
     componentWillUnmount() {
 
-    }
+    };
+    // set up change state function
+    insertstart = (val) => {
+        console.log("reached");
+        this.setState(state => ({date: state.date.insert(val, null)}));
+    };
+
+// todo pass function to input_form so that the form change the state of node
 
     render() {
+        // pass  change state function to the
         return (
             <div>
                 <Drawing/>
-                <Inputs_form/>
+                <Inputs_form insert={this.insertstart} />
             </div>
 
         );

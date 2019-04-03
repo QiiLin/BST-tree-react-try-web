@@ -9,7 +9,7 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {date: new Node(50, 600, 20)};
+        this.state = {tree: new Node(50, 600, 20)};
 
     };
 
@@ -23,16 +23,13 @@ class App extends Component {
     // set up change state function
     insertstart = (val) => {
         console.log("reached");
-        this.setState(state => ({date: state.date.insert(val, null)}));
+        this.setState(state => ({tree: state.tree.insert(val, null)}));
     };
-
-// todo pass function to input_form so that the form change the state of node
-
     render() {
         // pass  change state function to the
         return (
             <div>
-                <Drawing/>
+                <Drawing  node={this.state.tree} />
                 <Inputs_form insert={this.insertstart} />
             </div>
 

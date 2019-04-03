@@ -1,3 +1,5 @@
+import React from "react";
+
 class Node {
     constructor (keys, x, y ){
         this.value = keys;
@@ -27,6 +29,14 @@ class Node {
                 this.right.extend(direction, true)
             }
         }
+    }
+    // drawing current node
+    drawit() {
+        return <circle cx={this.x} cy={this.y} r="20"
+                                  stroke="red"
+                                   strokeWidth="1"
+                                   fill="none"/>
+
     }
 
     display(role){

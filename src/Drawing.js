@@ -16,6 +16,7 @@ class Drawing extends Component {
           return holder;
         } else {
             holder.push(root.drawit());
+            holder.push(root.drawtxt());
             holder = this.drwa_tree(root.left, holder);
             holder = this.drwa_tree(root.right, holder);
             return holder;
@@ -39,12 +40,7 @@ class Drawing extends Component {
             {/*/>*/}
             {/*<path d="M600,20 L500,100" stroke="black" strokeWidth="3" fill="none"/>*/}
 
-            {/*<text x="600" y="20"*/}
-                  {/*textAnchor="middle"*/}
-                  {/*stroke="red"*/}
-                  {/*strokeWidth="1px"*/}
-            {/*> 24*/}
-            {/*</text>*/}
+
             {/*<circle cx="520" cy="100" r="20"*/}
                     {/*stroke="red"*/}
                     {/*strokeWidth="1"*/}
